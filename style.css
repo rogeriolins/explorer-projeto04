@@ -1,0 +1,141 @@
+:root {
+  --color-background: #ece9fd;
+  --color-font-section: #7158ef;
+  --color-font-title: #090039;
+  --color-font-text: rgba(10, 0, 57, 0.64);
+
+  /* 
+
+    Ajustar o tamanho da fonte para facilitar na conversão 
+    62.5% de 16px = 10px
+
+    16 x 62.5 = 10
+
+    42 pixel se torna 4.2rem
+    69 pixel se torna 6.9rem
+    20 pixel se torna 2rem 
+  
+  */
+  font-size: 62.5%; /* 10px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Epilogue", sans-serif;
+
+  padding: 6rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+}
+
+/* 
+Unidade REM: Root Element
+1 REM = 1 Unidade do navegador
+*/
+
+main {
+  max-width: 33.3rem;
+  margin: 0 auto;
+}
+
+main p:first-child {
+  color: var(--color-font-section);
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 1.7rem;
+}
+
+main h1 {
+  font-weight: 800;
+  line-height: 4.8rem;
+  font-size: 4rem;
+
+  color: var(--color-font-title);
+
+  margin-bottom: 1.5rem;
+}
+
+main h1 + p {
+  /* border: 1px solid red; */
+  color: var(--color-font-text);
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: var(--color-font-title);
+  text-decoration: none;
+  line-height: 3.2rem;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.8rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  max-width: 25.7rem;
+
+  color: var(--color-font-title);
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8rem;
+  letter-spacing: -2px;
+  color: var(--color-font-title);
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+/* Media Queries */
+@media (min-width: 40em) {
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1020px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+}
